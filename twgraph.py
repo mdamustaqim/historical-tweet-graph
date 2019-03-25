@@ -59,8 +59,8 @@ if __name__ == "__main__":
 
 '''
 In order to put the tweet graphs all into one video, you'll need to install ffmpeg, and call it with the following parameters:
-ffmpeg -f image2 -framerate 60 -i /path/to/input/folders/twgraph%01d.png -c:v mpeg4 -q 2 -y /path/to/output/filename.mp4
-ffmpeg -f image2 -framerate 60 -i ~/Desktop/twproj/twgraph%01d.png -c:v mpeg4 -q 2 -y ~/Desktop/twproj/twgraph60fps.mp4
+ffmpeg -f image2 -framerate 60 -i /path/to/input/folders/twgraph%01d.png -vcodec libx264 -pix_fmt yuv420p -q 2 -y /path/to/output/filename.mp4
+ffmpeg -f image2 -framerate 60 -i ~/Desktop/ref\ docs/twproj/twgraph%01d.png -vcodec libx264 -pix_fmt yuv420p -q 2 -y ~/Desktop/ref\ docs/twproj/twgraph60fps.mp4
 
 -f image2        : calls image demuxer
 -framerate 60    : sets framerate of result to 60fps
